@@ -2,6 +2,9 @@
 title: "PA1_template.Rmd"  
 author: "Bleile"  
 date: "2/3/2021"  
+output:
+  html_document:
+    keep_md: true
 ---
 
 ##Reproducible Research Project 1 Assignment
@@ -61,11 +64,15 @@ NOTE: The GitHub repository also contains the dataset for the assignment so you 
 
 *Set Environment*
 
-'''{r}
-library(ggplot2)
+```{r}
+#setwd("~/Documents/GitHub/5_ReproducibleResearch/ReproducibleResearch_PeerAssessment1")
+library(tidyverse, lib.loc = "/Library/Frameworks/R.framework/Versions/4.0/Resources/library")
+library("data.table")
+library("knitr")
+knitr::opts_chunk$set(echo = TRUE)
 library(data.table)
-setWD("~")
-'''
+setwd("~")
+```
 
 *Loading and preprocessing the data*  
 Show any code that is needed to  
